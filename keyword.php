@@ -26,16 +26,6 @@
                 <!-- BEGIN CONTENT -->
                 <div class="page-content-wrapper">
                     <!-- BEGIN CONTENT BODY -->
-                    <!-- BEGIN PAGE HEAD-->
-                    <div class="page-head">
-                        <div class="container">
-                            <!-- BEGIN PAGE TITLE -->
-                            <div class="page-title"></div>
-                            <!-- END PAGE TITLE -->
-                            <?php include_once "toolbar.php"; ?>
-                        </div>
-                    </div>
-                    <!-- END PAGE HEAD-->
                     <!-- BEGIN PAGE CONTENT BODY -->
                     <div class="page-content">
                         <div class="container">
@@ -43,6 +33,10 @@
                             <ul class="page-breadcrumb breadcrumb">
                                 <li>
                                     <a href=".">首页</a>
+                                    <i class="fa fa-circle"></i>
+                                </li>
+                                <li>
+                                    <span>舆情监测</span>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
@@ -77,11 +71,11 @@
                                                     <div class="actions">
                                                         <div class="btn-group btn-group-devided" data-toggle="buttons">
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
+                                                                <input type="radio" name="options" class="toggle" id="option1">本日</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本周</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本月</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -102,16 +96,16 @@
                                                     <div class="actions">
                                                         <div class="btn-group btn-group-devided" data-toggle="buttons">
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
+                                                                <input type="radio" name="options" class="toggle" id="option1">本日</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本周</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本月</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="portlet-body">
-                                                    <div id="table-keyword-news" class="scroller" style="height: 550px;" data-always-visible="1" data-rail-visible1="1"></div>
+                                                    <div id="table-keyword-news" class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible1="1"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,16 +119,16 @@
                                                     <div class="actions">
                                                         <div class="btn-group btn-group-devided" data-toggle="buttons">
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
+                                                                <input type="radio" name="options" class="toggle" id="option1">本日</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本周</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本月</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="portlet-body">
-                                                    <div id="table-keyword-comments" class="scroller" style="height: 550px;" data-always-visible="1" data-rail-visible1="1"></div>
+                                                    <div id="table-keyword-comments" class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible1="1"></div>
                                                 </div>
                                             </div>
                                         </div>
