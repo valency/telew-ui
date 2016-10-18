@@ -1,5 +1,9 @@
 $(document).ready(function () {
+    for (var i = 0; i < DATA_SUMMARY.length - 1; i++) {
+        $("#chart-summary-btn-group").append("<a class='btn btn-circle btn-default' href='keyword.php?keyword=" + DATA_SUMMARY[i]["keyword"] + "'>" + DATA_SUMMARY[i]["keyword"] + "</a> ");
+    }
     draw_figures();
+    draw_tables();
 });
 
 function draw_figures() {
@@ -19,142 +23,44 @@ function draw_figures() {
             "axisAlpha": 0.5,
             "gridAlpha": 0
         }],
-        graphs: [{
-            "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-            "fillAlphas": 0.8,
-            "labelText": "[[value]]",
-            "lineAlpha": 0.3,
-            "title": "Europe",
-            "type": "column",
-            "color": "#000000",
-            "valueField": "europe"
-        }, {
-            "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-            "fillAlphas": 0.8,
-            "labelText": "[[value]]",
-            "lineAlpha": 0.3,
-            "title": "North America",
-            "type": "column",
-            "color": "#000000",
-            "valueField": "namerica"
-        }, {
-            "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-            "fillAlphas": 0.8,
-            "labelText": "[[value]]",
-            "lineAlpha": 0.3,
-            "title": "Asia-Pacific",
-            "type": "column",
-            "color": "#000000",
-            "valueField": "asia"
-        }, {
-            "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-            "fillAlphas": 0.8,
-            "labelText": "[[value]]",
-            "lineAlpha": 0.3,
-            "title": "Latin America",
-            "type": "column",
-            "color": "#000000",
-            "valueField": "lamerica"
-        }, {
-            "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-            "fillAlphas": 0.8,
-            "labelText": "[[value]]",
-            "lineAlpha": 0.3,
-            "title": "Middle-East",
-            "type": "column",
-            "color": "#000000",
-            "valueField": "meast"
-        }, {
-            "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
-            "fillAlphas": 0.8,
-            "labelText": "[[value]]",
-            "lineAlpha": 0.3,
-            "title": "Africa",
-            "type": "column",
-            "color": "#000000",
-            "valueField": "africa"
-        }],
+        graphs: DATA_SUMMARY_GRAPHS,
         rotate: true,
-        categoryField: "year",
+        categoryField: "keyword",
         categoryAxis: {
             "gridPosition": "start",
             "axisAlpha": 0,
             "gridAlpha": 0,
             "position": "left"
-        },
-        listeners: [{
-            "event": "rendered",
-            "method": function () {
-                $("a[title='JavaScript charts']").remove();
-            }
-        }]
+        }
     });
 }
 
-function get_conf() {
-    var conf = [];
-    var input_cust_type = $("#input-cust-type").val();
-    if (input_cust_type != "") conf.push("residence = '" + input_cust_type + "'");
-    var input_cust_age = $("#input-cust-age").val();
-    if (input_cust_age != "") {
-        input_cust_age = input_cust_age.split(",");
-        conf.push("age BETWEEN " + input_cust_age[0] + " AND " + input_cust_age[1]);
+function draw_tables() {
+    var sources = ["微博", "微信", "论坛", "新闻", "报刊"];
+    for (var i = 0; i < sources.length; i++) {
+        var html = "<tr>";
+        html += "<td><a href='javascript:void(0)' class='primary-link'>" + sources[i] + "</a></td>";
+        html += "<td>" + Math.round(Math.random() * 1000) + "</td>";
+        html += "<td>" + Math.round(Math.random() * 1000) + "</td>";
+        html += "<td>" + Math.round(Math.random() * 1000) + "</td>";
+        html += "<td><span class='bold theme-font'>" + Math.round(Math.random() * 100) + "%</span></td>";
+        html += "</tr>";
+        $("#table-summary").append(html);
     }
-    var input_cust_member_year = $("#input-cust-member-year").val();
-    if (input_cust_member_year != "") {
-        input_cust_member_year = input_cust_member_year.split(",");
-        conf.push("years_registered BETWEEN " + input_cust_member_year[0] + " AND " + input_cust_member_year[1]);
+    for (i = 0; i < DATA_COMMENTS.length; i++) {
+        var cmt = DATA_COMMENTS[i];
+        html = "<div class='item'>";
+        html += "<div class='item-head'>";
+        html += "<div class='item-details'>";
+        html += "<img class='item-pic rounded' src='assets/pages/media/users/avatar" + Math.round(1 + Math.random() * 6) + ".jpg'>";
+        html += "<a href='' class='item-name primary-link'>" + cmt["id"] + "</a>";
+        html += "<span class='item-label'>" + Math.round(1 + Math.random() * 24) + " hrs ago</span>";
+        html += "</div>";
+        html += "<span class='item-status'>";
+        html += "<span class='badge badge-empty badge-danger'></span> 负面</span>";
+        html += "</div>";
+        html += "<div class='item-body'>" + cmt["text"] + "</div>";
+        html += "</div>";
+        $("#table-comments").append(html);
     }
-    var input_cust_daily_savings = $("#input-cust-daily-savings").val();
-    if (input_cust_daily_savings != "") {
-        input_cust_daily_savings = input_cust_daily_savings.split(",");
-        conf.push("avg_saving_all_time BETWEEN " + input_cust_daily_savings[0] + " AND " + input_cust_daily_savings[1]);
-    }
-    if ($("#check-cust-internet-bank").is(':checked')) conf.push("e_bank_id > 0");
-    if ($("#check-cust-mobile-bank").is(':checked')) conf.push("mobile_bank_id > 0");
-    if ($("#check-cust-wechat-bank").is(':checked')) conf.push("wechat_bank_id > 0");
-    if (conf.length > 0) conf = "WHERE " + conf.join(" AND ");
-    conf = "WHERE_CLAUSE = \"" + conf + "\"";
-    return conf;
-}
-
-function draw_chart_credit_card_count(div, data) {
-    $("#" + div).html("");
-    AmCharts.makeChart(div, {
-        "type": "serial",
-        "theme": "light",
-        "categoryField": 0,
-        "rotate": true,
-        "startDuration": 1,
-        "categoryAxis": {
-            "gridPosition": "start",
-            "position": "left"
-        },
-        "trendLines": [],
-        "graphs": [{
-            "balloonText": "Hold: [[value]]",
-            "fillAlphas": 0.8,
-            "lineAlpha": 0.2,
-            "title": "Hold",
-            "type": "column",
-            "valueField": 1
-        }, {
-            "balloonText": "Canceled: [[value]]",
-            "fillAlphas": 0.8,
-            "lineAlpha": 0.2,
-            "title": "Canceled",
-            "type": "column",
-            "valueField": 2
-        }],
-        "guides": [],
-        "valueAxes": [{
-            "position": "top",
-            "axisAlpha": 0
-        }],
-        "allLabels": [],
-        "balloon": {},
-        "titles": [],
-        "dataProvider": data
-    });
-    $("a[title='JavaScript charts']").remove();
 }

@@ -1,48 +1,11 @@
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
+body, h1, h2, h3, h4, h5, h6 {
     font-family: "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
-    margin-bottom: 63px;
-}
-
-.navbar-brand {
-    padding: 13px 15px;
-}
-
-.navbar-brand > img {
-    height: 35px;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 63px;
-}
-
-footer > hr {
-    margin: 1em 0;
-}
-
-footer > p {
-    padding: 0 1em;
-}
-
-.chart-title {
-    display: block;
-    width: 100%;
-    text-align: center;
 }
 
 .container {
-    height: 484px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    /*width: 100%;*/
+}
+
+.amcharts-chart-div > a {
+    opacity: 0 !important;
 }
