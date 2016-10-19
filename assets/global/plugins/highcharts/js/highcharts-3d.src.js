@@ -732,7 +732,7 @@ Highcharts.wrap(Highcharts.Axis.prototype, 'render', function (proceed) {
 		top = this.top;
 
 	if (this.isZAxis) {
-		return;
+
 	} else if (this.horiz) {
 		var bottomShape = {
 			x: left,
