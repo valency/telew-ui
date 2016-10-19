@@ -36,7 +36,7 @@ function draw_figures() {
 }
 
 function draw_tables() {
-    var sources = ["微博", "微信", "论坛", "新闻", "报刊"];
+    var sources = ["微博", "微信", "论坛", "报刊"];
     for (var i = 0; i < sources.length; i++) {
         var html = "<tr>";
         html += "<td><a href='javascript:void(0)' class='primary-link'>" + sources[i] + "</a></td>";

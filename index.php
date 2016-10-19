@@ -26,18 +26,6 @@
                 <!-- BEGIN CONTENT -->
                 <div class="page-content-wrapper">
                     <!-- BEGIN CONTENT BODY -->
-                    <!-- BEGIN PAGE HEAD-->
-                    <div class="page-head">
-                        <div class="container">
-                            <!-- BEGIN PAGE TITLE -->
-                            <div class="page-title">
-                                <h1>报表中心</h1>
-                            </div>
-                            <!-- END PAGE TITLE -->
-                            <?php include_once "toolbar.php"; ?>
-                        </div>
-                    </div>
-                    <!-- END PAGE HEAD-->
                     <!-- BEGIN PAGE CONTENT BODY -->
                     <div class="page-content">
                         <div class="container">
@@ -48,7 +36,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <span>报表中心</span>
+                                    <span>舆情监测</span>
                                 </li>
                             </ul>
                             <!-- END PAGE BREADCRUMBS -->
@@ -61,77 +49,76 @@
                                                 <div class="portlet-title">
                                                     <div class="caption caption-md">
                                                         <i class="icon-bar-chart font-dark hide"></i>
-                                                        <span class="caption-subject font-green-steel uppercase bold">Sales Summary</span>
-                                                        <span class="caption-helper hide">weekly stats...</span>
+                                                        <span class="caption-subject font-green-steel uppercase bold">数据概览</span>
                                                     </div>
                                                     <div class="actions">
                                                         <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                                            <label class="btn btn-transparent btn-no-border blue-oleo btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
-                                                            <label class="btn btn-transparent btn-no-border blue-oleo btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
-                                                            <label class="btn btn-transparent btn-no-border blue-oleo btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                                            <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm active">
+                                                                <input type="radio" name="options" class="toggle" id="option1">本日</label>
+                                                            <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
+                                                                <input type="radio" name="options" class="toggle" id="option2">本周</label>
+                                                            <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
+                                                                <input type="radio" name="options" class="toggle" id="option2">本月</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="row list-separated">
                                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                                            <div class="font-grey-mint font-sm"> Total Sales</div>
+                                                            <div class="font-grey-mint font-sm"> 数据总量</div>
                                                             <div class="uppercase font-hg font-red-flamingo"> 13,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                                <span class="font-xs font-grey-mint">条</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                                            <div class="font-grey-mint font-sm"> Revenue</div>
-                                                            <div class="uppercase font-hg theme-font"> 4,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                            <div class="font-grey-mint font-sm"> 评论数量</div>
+                                                            <div class="uppercase font-hg theme-font"> 11,760
+                                                                <span class="font-xs font-grey-mint">条</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                                            <div class="font-grey-mint font-sm"> Expenses</div>
-                                                            <div class="uppercase font-hg font-purple"> 11,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                            <div class="font-grey-mint font-sm"> 转发数量</div>
+                                                            <div class="uppercase font-hg font-purple"> 4,760
+                                                                <span class="font-xs font-grey-mint">条</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3 col-sm-3 col-xs-6">
-                                                            <div class="font-grey-mint font-sm"> Growth</div>
+                                                            <div class="font-grey-mint font-sm"> 关注人数</div>
                                                             <div class="uppercase font-hg font-blue-sharp"> 9,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                                <span class="font-xs font-grey-mint">人</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <ul class="list-separated list-inline-xs hide">
                                                         <li>
-                                                            <div class="font-grey-mint font-sm"> Total Sales</div>
+                                                            <div class="font-grey-mint font-sm"> 数据总量</div>
                                                             <div class="uppercase font-hg font-red-flamingo"> 13,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                                <span class="font-xs font-grey-mint">条</span>
                                                             </div>
                                                         </li>
                                                         <li></li>
                                                         <li class="border">
-                                                            <div class="font-grey-mint font-sm"> Revenue</div>
-                                                            <div class="uppercase font-hg theme-font"> 4,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                            <div class="font-grey-mint font-sm"> 评论数量</div>
+                                                            <div class="uppercase font-hg theme-font"> 11,760
+                                                                <span class="font-xs font-grey-mint">条</span>
                                                             </div>
                                                         </li>
                                                         <li class="divider"></li>
                                                         <li>
-                                                            <div class="font-grey-mint font-sm"> Expenses</div>
-                                                            <div class="uppercase font-hg font-purple"> 11,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                            <div class="font-grey-mint font-sm"> 转发数量</div>
+                                                            <div class="uppercase font-hg font-purple"> 4,760
+                                                                <span class="font-xs font-grey-mint">条</span>
                                                             </div>
                                                         </li>
                                                         <li class="divider"></li>
                                                         <li>
-                                                            <div class="font-grey-mint font-sm"> Growth</div>
+                                                            <div class="font-grey-mint font-sm"> 关注人数</div>
                                                             <div class="uppercase font-hg font-blue-sharp"> 9,760
-                                                                <span class="font-lg font-grey-mint">$</span>
+                                                                <span class="font-xs font-grey-mint">人</span>
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                    <div id="sales_statistics" class="portlet-body-morris-fit morris-chart" style="height: 267px"></div>
+                                                    <div id="sales_statistics" class="portlet-body-morris-fit morris-chart" style="height: 177px"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,16 +132,16 @@
                                                     <div class="actions">
                                                         <div class="btn-group btn-group-devided" data-toggle="buttons">
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
+                                                                <input type="radio" name="options" class="toggle" id="option1">本日</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本周</label>
                                                             <label class="btn btn-transparent blue-oleo btn-no-border btn-outline btn-circle btn-sm">
-                                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                                                <input type="radio" name="options" class="toggle" id="option2">本月</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="portlet-body">
-                                                    <div class="row number-stats margin-bottom-30">
+                                                    <div class="row number-stats">
                                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                                             <div class="stat-left">
                                                                 <div class="stat-chart">
@@ -179,7 +166,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="table-scrollable table-scrollable-borderless">
-                                                        <table class="table table-hover table-light">
+                                                        <table class="table table-hover table-light table-condensed">
                                                             <thead>
                                                             <tr class="uppercase">
                                                                 <th> 数据源</th>
@@ -208,7 +195,7 @@
                                                 </div>
                                                 <div class="portlet-body">
                                                     <div class="task-content">
-                                                        <div class="scroller" style="height: 338px;" data-always-visible="1" data-rail-visible1="1">
+                                                        <div class="scroller" style="height: 238px;" data-always-visible="1" data-rail-visible1="1">
                                                             <div id="chart-summary"></div>
                                                         </div>
                                                     </div>
@@ -231,7 +218,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="portlet-body">
-                                                    <div class="scroller" style="height: 338px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                                    <div class="scroller" style="height: 238px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
                                                         <div id="table-comments" class="general-item-list"></div>
                                                     </div>
                                                 </div>
@@ -281,7 +268,7 @@
 <script src="assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>
+<script src="assets/pages/scripts/dashboard.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 </body>

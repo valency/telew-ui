@@ -1,20 +1,20 @@
-var Dashboard = function() {
+var Dashboard = function () {
 
     return {
 
-        initJQVMAP: function() {
+        initJQVMAP: function () {
             if (!jQuery().vectorMap) {
                 return;
             }
 
-            var showMap = function(name) {
+            var showMap = function (name) {
                 jQuery('.vmaps').hide();
                 jQuery('#vmap_' + name).show();
             };
 
-            var setMap = function(name) {
+            var setMap = function (name) {
                 var map = jQuery('#vmap_' + name);
-                
+
                 if (map.size() !== 1) {
                     return;
                 }
@@ -35,22 +35,22 @@ var Dashboard = function() {
                     selectedColor: '#c9dfaf',
                     selectedRegion: null,
                     showTooltip: true,
-                    onLabelShow: function(event, label, code) {
+                    onLabelShow: function (event, label, code) {
 
                     },
-                    onRegionOver: function(event, code) {
+                    onRegionOver: function (event, code) {
                         if (code == 'ca') {
                             event.preventDefault();
                         }
                     },
-                    onRegionClick: function(element, code, region) {
+                    onRegionClick: function (element, code, region) {
                         var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
                         alert(message);
                     }
                 };
 
                 data.map = name + '_en';
-              
+
                 map.width(map.parent().parent().width());
                 map.show();
                 map.vectorMap(data);
@@ -64,36 +64,36 @@ var Dashboard = function() {
             setMap("germany");
             showMap("world");
 
-            jQuery('#regional_stat_world').click(function() {
+            jQuery('#regional_stat_world').click(function () {
                 showMap("world");
             });
 
-            jQuery('#regional_stat_usa').click(function() {
+            jQuery('#regional_stat_usa').click(function () {
                 showMap("usa");
             });
 
-            jQuery('#regional_stat_europe').click(function() {
+            jQuery('#regional_stat_europe').click(function () {
                 showMap("europe");
             });
-            jQuery('#regional_stat_russia').click(function() {
+            jQuery('#regional_stat_russia').click(function () {
                 showMap("russia");
             });
-            jQuery('#regional_stat_germany').click(function() {
+            jQuery('#regional_stat_germany').click(function () {
                 showMap("germany");
             });
 
             $('#region_statistics_loading').hide();
             $('#region_statistics_content').show();
 
-            App.addResizeHandler(function() {
-                jQuery('.vmaps').each(function() {
+            App.addResizeHandler(function () {
+                jQuery('.vmaps').each(function () {
                     var map = jQuery(this);
                     map.width(map.parent().width());
                 });
             });
         },
 
-        initCalendar: function() {
+        initCalendar: function () {
             if (!jQuery().fullCalendar) {
                 return;
             }
@@ -128,7 +128,6 @@ var Dashboard = function() {
                     };
                 }
             }
-
 
 
             $('#calendar').fullCalendar('destroy'); // destroy the calendar
@@ -181,7 +180,7 @@ var Dashboard = function() {
             });
         },
 
-        initCharts: function() {
+        initCharts: function () {
             if (!jQuery.plot) {
                 return;
             }
@@ -295,7 +294,7 @@ var Dashboard = function() {
                     });
 
                 var previousPoint = null;
-                $("#site_statistics").bind("plothover", function(event, pos, item) {
+                $("#site_statistics").bind("plothover", function (event, pos, item) {
                     $("#x").text(pos.x.toFixed(2));
                     $("#y").text(pos.y.toFixed(2));
                     if (item) {
@@ -401,7 +400,7 @@ var Dashboard = function() {
                         }
                     });
 
-                $("#site_activities").bind("plothover", function(event, pos, item) {
+                $("#site_activities").bind("plothover", function (event, pos, item) {
                     $("#x").text(pos.x.toFixed(2));
                     $("#y").text(pos.y.toFixed(2));
                     if (item) {
@@ -415,13 +414,13 @@ var Dashboard = function() {
                     }
                 });
 
-                $('#site_activities').bind("mouseleave", function() {
+                $('#site_activities').bind("mouseleave", function () {
                     $("#tooltip").remove();
                 });
             }
         },
 
-        initEasyPieCharts: function() {
+        initEasyPieCharts: function () {
             if (!jQuery().easyPieChart) {
                 return;
             }
@@ -447,8 +446,8 @@ var Dashboard = function() {
                 barColor: App.getBrandColor('red')
             });
 
-            $('.easy-pie-chart-reload').click(function() {
-                $('.easy-pie-chart .number').each(function() {
+            $('.easy-pie-chart-reload').click(function () {
+                $('.easy-pie-chart .number').each(function () {
                     var newValue = Math.floor(100 * Math.random());
                     $(this).data('easyPieChart').update(newValue);
                     $('span', this).text(newValue);
@@ -456,7 +455,7 @@ var Dashboard = function() {
             });
         },
 
-        initSparklineCharts: function() {
+        initSparklineCharts: function () {
             if (!jQuery().sparkline) {
                 return;
             }
@@ -504,9 +503,10 @@ var Dashboard = function() {
             });
         },
 
-        initMorisCharts: function() {
+        initMorisCharts: function () {
             if (Morris.EventEmitter && $('#sales_statistics').size() > 0) {
                 // Use Morris.Area instead of Morris.Line
+                var rnd_seeds = [5000 + Math.round(Math.random() * 5000), 5000 + Math.round(Math.random() * 5000), 5000 + Math.round(Math.random() * 5000), 5000 + Math.round(Math.random() * 5000), 5000 + Math.round(Math.random() * 5000)];
                 dashboardMainChart = Morris.Area({
                     element: 'sales_statistics',
                     padding: 0,
@@ -516,30 +516,30 @@ var Dashboard = function() {
                     axes: false,
                     fillOpacity: 1,
                     data: [{
-                        period: '2011 Q1',
-                        sales: 1400,
-                        profit: 400
+                        period: '2016-06',
+                        sales: rnd_seeds[0],
+                        profit: Math.round(Math.random() * rnd_seeds[0])
                     }, {
-                        period: '2011 Q2',
-                        sales: 1100,
-                        profit: 600
+                        period: '2016-07',
+                        sales: rnd_seeds[1],
+                        profit: Math.round(Math.random() * rnd_seeds[1])
                     }, {
-                        period: '2011 Q3',
-                        sales: 1600,
-                        profit: 500
+                        period: '2016-08',
+                        sales: rnd_seeds[2],
+                        profit: Math.round(Math.random() * rnd_seeds[2])
                     }, {
-                        period: '2011 Q4',
-                        sales: 1200,
-                        profit: 400
+                        period: '2016-09',
+                        sales: rnd_seeds[3],
+                        profit: Math.round(Math.random() * rnd_seeds[3])
                     }, {
-                        period: '2012 Q1',
-                        sales: 1550,
-                        profit: 800
+                        period: '2016-10',
+                        sales: rnd_seeds[4],
+                        profit: Math.round(Math.random() * rnd_seeds[4])
                     }],
                     lineColors: ['#399a8c', '#92e9dc'],
                     xkey: 'period',
                     ykeys: ['sales', 'profit'],
-                    labels: ['Sales', 'Profit'],
+                    labels: ['评论数量', '转发数量'],
                     pointSize: 0,
                     lineWidth: 0,
                     hideHover: 'auto',
@@ -549,14 +549,14 @@ var Dashboard = function() {
             }
         },
 
-        initChat: function() {
+        initChat: function () {
             var cont = $('#chats');
             var list = $('.chats', cont);
             var form = $('.chat-form', cont);
             var input = $('input', form);
             var btn = $('.btn', form);
 
-            var handleClick = function(e) {
+            var handleClick = function (e) {
                 e.preventDefault();
 
                 var text = input.val();
@@ -582,9 +582,9 @@ var Dashboard = function() {
                 var msg = list.append(tpl);
                 input.val("");
 
-                var getLastPostPos = function() {
+                var getLastPostPos = function () {
                     var height = 0;
-                    cont.find("li.out, li.in").each(function() {
+                    cont.find("li.out, li.in").each(function () {
                         height = height + $(this).outerHeight();
                     });
 
@@ -596,7 +596,7 @@ var Dashboard = function() {
                 });
             };
 
-            $('body').on('click', '.message .name', function(e) {
+            $('body').on('click', '.message .name', function (e) {
                 e.preventDefault(); // prevent click event
 
                 var name = $(this).text(); // get clicked user's full name
@@ -606,7 +606,7 @@ var Dashboard = function() {
 
             btn.click(handleClick);
 
-            input.keypress(function(e) {
+            input.keypress(function (e) {
                 if (e.which == 13) {
                     handleClick(e);
                     return false; //<---- Add this line
@@ -614,7 +614,7 @@ var Dashboard = function() {
             });
         },
 
-        initDashboardDaterange: function() {
+        initDashboardDaterange: function () {
             if (!jQuery().daterangepicker) {
                 return;
             }
@@ -664,18 +664,18 @@ var Dashboard = function() {
                 //"startDate": "11/08/2015",
                 //"endDate": "11/14/2015",
                 opens: (App.isRTL() ? 'right' : 'left'),
-            }, function(start, end, label) {
+            }, function (start, end, label) {
                 if ($('#dashboard-report-range').attr('data-display-range') != '0') {
                     $('#dashboard-report-range span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
                 }
             });
-             if ($('#dashboard-report-range').attr('data-display-range') != '0') {
+            if ($('#dashboard-report-range').attr('data-display-range') != '0') {
                 $('#dashboard-report-range span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
             }
             $('#dashboard-report-range').show();
         },
 
-        initAmChart1: function() {
+        initAmChart1: function () {
             if (typeof(AmCharts) === 'undefined' || $('#dashboard_amchart_1').size() === 0) {
                 return;
             }
@@ -890,7 +890,7 @@ var Dashboard = function() {
             });
         },
 
-        initAmChart2: function() {
+        initAmChart2: function () {
             if (typeof(AmCharts) === 'undefined' || $('#dashboard_amchart_2').size() === 0) {
                 return;
             }
@@ -909,75 +909,75 @@ var Dashboard = function() {
                     map: "worldLow",
                     linkToObject: "london",
                     images: [{
-                            id: "london",
-                            color: "#009dc7",
-                            svgPath: targetSVG,
-                            title: "London",
-                            latitude: 51.5002,
-                            longitude: -0.1262,
-                            scale: 1.5,
-                            zoomLevel: 2.74,
-                            zoomLongitude: -20.1341,
-                            zoomLatitude: 49.1712,
+                        id: "london",
+                        color: "#009dc7",
+                        svgPath: targetSVG,
+                        title: "London",
+                        latitude: 51.5002,
+                        longitude: -0.1262,
+                        scale: 1.5,
+                        zoomLevel: 2.74,
+                        zoomLongitude: -20.1341,
+                        zoomLatitude: 49.1712,
 
-                            lines: [{
-                                latitudes: [51.5002, 50.4422],
-                                longitudes: [-0.1262, 30.5367]
-                            }, {
-                                latitudes: [51.5002, 46.9480],
-                                longitudes: [-0.1262, 7.4481]
-                            }, {
-                                latitudes: [51.5002, 59.3328],
-                                longitudes: [-0.1262, 18.0645]
-                            }, {
-                                latitudes: [51.5002, 40.4167],
-                                longitudes: [-0.1262, -3.7033]
-                            }, {
-                                latitudes: [51.5002, 46.0514],
-                                longitudes: [-0.1262, 14.5060]
-                            }, {
-                                latitudes: [51.5002, 48.2116],
-                                longitudes: [-0.1262, 17.1547]
-                            }, {
-                                latitudes: [51.5002, 44.8048],
-                                longitudes: [-0.1262, 20.4781]
-                            }, {
-                                latitudes: [51.5002, 55.7558],
-                                longitudes: [-0.1262, 37.6176]
-                            }, {
-                                latitudes: [51.5002, 38.7072],
-                                longitudes: [-0.1262, -9.1355]
-                            }, {
-                                latitudes: [51.5002, 54.6896],
-                                longitudes: [-0.1262, 25.2799]
-                            }, {
-                                latitudes: [51.5002, 64.1353],
-                                longitudes: [-0.1262, -21.8952]
-                            }, {
-                                latitudes: [51.5002, 40.4300],
-                                longitudes: [-0.1262, -74.0000]
-                            }],
+                        lines: [{
+                            latitudes: [51.5002, 50.4422],
+                            longitudes: [-0.1262, 30.5367]
+                        }, {
+                            latitudes: [51.5002, 46.9480],
+                            longitudes: [-0.1262, 7.4481]
+                        }, {
+                            latitudes: [51.5002, 59.3328],
+                            longitudes: [-0.1262, 18.0645]
+                        }, {
+                            latitudes: [51.5002, 40.4167],
+                            longitudes: [-0.1262, -3.7033]
+                        }, {
+                            latitudes: [51.5002, 46.0514],
+                            longitudes: [-0.1262, 14.5060]
+                        }, {
+                            latitudes: [51.5002, 48.2116],
+                            longitudes: [-0.1262, 17.1547]
+                        }, {
+                            latitudes: [51.5002, 44.8048],
+                            longitudes: [-0.1262, 20.4781]
+                        }, {
+                            latitudes: [51.5002, 55.7558],
+                            longitudes: [-0.1262, 37.6176]
+                        }, {
+                            latitudes: [51.5002, 38.7072],
+                            longitudes: [-0.1262, -9.1355]
+                        }, {
+                            latitudes: [51.5002, 54.6896],
+                            longitudes: [-0.1262, 25.2799]
+                        }, {
+                            latitudes: [51.5002, 64.1353],
+                            longitudes: [-0.1262, -21.8952]
+                        }, {
+                            latitudes: [51.5002, 40.4300],
+                            longitudes: [-0.1262, -74.0000]
+                        }],
 
-                            images: [{
-                                label: "Flights from London",
-                                svgPath: planeSVG,
-                                left: 100,
-                                top: 45,
-                                labelShiftY: 5,
-                                color: "#d93d5e",
-                                labelColor: "#d93d5e",
-                                labelRollOverColor: "#d93d5e",
-                                labelFontSize: 20
-                            }, {
-                                label: "show flights from Vilnius",
-                                left: 106,
-                                top: 70,
-                                labelColor: "#6c7b88",
-                                labelRollOverColor: "#d93d5e",
-                                labelFontSize: 11,
-                                linkToObject: "vilnius"
-                            }]
-                        },
+                        images: [{
+                            label: "Flights from London",
+                            svgPath: planeSVG,
+                            left: 100,
+                            top: 45,
+                            labelShiftY: 5,
+                            color: "#d93d5e",
+                            labelColor: "#d93d5e",
+                            labelRollOverColor: "#d93d5e",
+                            labelFontSize: 20
+                        }, {
+                            label: "show flights from Vilnius",
+                            left: 106,
+                            top: 70,
+                            labelColor: "#6c7b88",
+                            labelRollOverColor: "#d93d5e",
+                            labelFontSize: 11,
+                            linkToObject: "vilnius"
+                        }]
+                    },
 
                         {
                             id: "vilnius",
@@ -1166,7 +1166,7 @@ var Dashboard = function() {
             });
         },
 
-        initAmChart3: function() {
+        initAmChart3: function () {
             if (typeof(AmCharts) === 'undefined' || $('#dashboard_amchart_3').size() === 0) {
                 return;
             }
@@ -1256,7 +1256,7 @@ var Dashboard = function() {
             });
         },
 
-        initAmChart4: function() {
+        initAmChart4: function () {
             if (typeof(AmCharts) === 'undefined' || $('#dashboard_amchart_4').size() === 0) {
                 return;
             }
@@ -1294,7 +1294,7 @@ var Dashboard = function() {
                     "enabled": true
                 }
             });
-            jQuery('.chart-input').off().on('input change', function() {
+            jQuery('.chart-input').off().on('input change', function () {
                 var property = jQuery(this).data('property');
                 var target = chart;
                 var value = Number(this.value);
@@ -1309,7 +1309,7 @@ var Dashboard = function() {
             });
         },
 
-        initWorldMapStats: function() {
+        initWorldMapStats: function () {
             if ($('#mapplic').size() === 0) {
                 return;
             }
@@ -1369,7 +1369,7 @@ var Dashboard = function() {
             });
         },
 
-        init: function() {
+        init: function () {
 
             this.initJQVMAP();
             this.initCalendar();
@@ -1392,7 +1392,7 @@ var Dashboard = function() {
 }();
 
 if (App.isAngularJsApp() === false) {
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
         Dashboard.init(); // init metronic core componets
     });
 }

@@ -1,9 +1,9 @@
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, .label, .table.table-light > thead > tr > th {
     font-family: "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 }
 
-.container {
-    /*width: 100%;*/
+blockquote {
+    font-size: 14px;
 }
 
 .amcharts-chart-div > a {

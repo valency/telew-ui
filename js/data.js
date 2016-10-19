@@ -129,9 +129,7 @@ for (var key in DATA_KEYWORD_DETAILS_WORDS) {
             m = Math.round((m + Math.round(Math.random() * m)) / 2);
             DATA_KEYWORD_DETAILS[key].push({
                 name: DATA_KEYWORD_DETAILS_WORDS[key][i],
-                points: m,
-                color: "#92e9dc",
-                bullet: "https://www.amcharts.com/lib/images/faces/A0" + (1 + Math.round(Math.random() * 4)) + ".png"
+                points: m
             });
         }
     }

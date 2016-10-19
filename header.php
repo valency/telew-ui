@@ -5,7 +5,7 @@
         <div class="container">
             <!-- BEGIN LOGO -->
             <div class="page-logo">
-                <a href="index.html">
+                <a href=".">
                     <img src="assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
                 </a>
             </div>
@@ -361,7 +361,7 @@
             <!-- BEGIN HEADER SEARCH BOX -->
             <form class="search-form" action="page_general_search.html" method="GET">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="query">
+                    <input type="text" class="form-control" placeholder="搜索" name="query">
                     <span class="input-group-btn">
                                             <a href="javascript:;" class="btn submit">
                                                 <i class="icon-magnifier"></i>
@@ -376,7 +376,7 @@
             <div class="hor-menu  ">
                 <ul class="nav navbar-nav">
                     <li class="menu-dropdown classic-menu-dropdown active">
-                        <a href="javascript:;"> Dashboard
+                        <a href="javascript:;"> 舆情监测
                             <span class="arrow"></span>
                         </a>
                         <ul class="dropdown-menu pull-left">
@@ -399,7 +399,7 @@
                         </ul>
                     </li>
                     <li class="menu-dropdown mega-menu-dropdown  ">
-                        <a href="javascript:;"> UI Features
+                        <a href="javascript:;"> 口碑监测
                             <span class="arrow"></span>
                         </a>
                         <ul class="dropdown-menu" style="min-width: 710px">
@@ -517,7 +517,7 @@
                         </ul>
                     </li>
                     <li class="menu-dropdown classic-menu-dropdown ">
-                        <a href="javascript:;"> Layouts
+                        <a href="javascript:;"> 政策信息
                             <span class="arrow"></span>
                         </a>
                         <ul class="dropdown-menu pull-left">
@@ -545,7 +545,7 @@
                         </ul>
                     </li>
                     <li class="menu-dropdown mega-menu-dropdown  mega-menu-full">
-                        <a href="javascript:;"> Components
+                        <a href="javascript:;"> 行业动态
                             <span class="arrow"></span>
                         </a>
                         <ul class="dropdown-menu" style="min-width: ">
@@ -649,7 +649,7 @@
                         </ul>
                     </li>
                     <li class="menu-dropdown classic-menu-dropdown ">
-                        <a href="javascript:;"> More
+                        <a href="javascript:;"> 产品调研
                             <span class="arrow"></span>
                         </a>
                         <ul class="dropdown-menu pull-left">
@@ -850,7 +850,7 @@
                     </li>
                     <li class="menu-dropdown classic-menu-dropdown ">
                         <a href="javascript:;">
-                            <i class="icon-briefcase"></i> Pages
+                            <i class="icon-briefcase"></i> 投诉管理
                             <span class="arrow"></span>
                         </a>
                         <ul class="dropdown-menu pull-left">
