@@ -1,5 +1,8 @@
-body, h1, h2, h3, h4, h5, h6, tspan, .label, .table.table-light > thead > tr > th, .balloon {
-    font-family: "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+body, h1, h2, h3, h4, h5, h6, tspan,
+.label, .table.table-light > thead > tr > th, .balloon,
+.morris-hover.morris-default-style .morris-hover-row-label, .morris-hover.morris-default-style .morris-hover-point,
+.select2-container--bootstrap .select2-results__group, .select2-container--bootstrap .select2-selection {
+    font-family: "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif !important;
 }
 
 body, blockquote {
