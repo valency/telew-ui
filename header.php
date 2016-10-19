@@ -6,7 +6,7 @@
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href=".">
-                    <img src="assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
+                    <img src="img/logo.png" alt="logo" class="logo-default">
                 </a>
             </div>
             <!-- END LOGO -->

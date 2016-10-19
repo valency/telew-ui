@@ -1,11 +1,20 @@
-body, h1, h2, h3, h4, h5, h6, .label, .table.table-light > thead > tr > th {
+body, h1, h2, h3, h4, h5, h6, tspan, .label, .table.table-light > thead > tr > th, .balloon {
     font-family: "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 }
 
-blockquote {
+body, blockquote {
     font-size: 14px;
+}
+
+.page-header .page-header-top .page-logo .logo-default {
+    margin: 15px 0 0;
+    height: 50px;
 }
 
 .amcharts-chart-div > a {
     opacity: 0 !important;
+}
+
+.balloon {
+    font-size: 13px;
 }

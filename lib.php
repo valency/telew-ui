@@ -1,11 +1,11 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="云数电信舆情分析系统" name="description"/>
+<meta content="电信大数据舆情分析系统" name="description"/>
 <meta content="云数信息科技（深圳）有限公司" name="author"/>
 
 <link rel="shortcut icon" href="favicon.ico"/>
-<title>云数电信舆情分析系统</title>
+<title>电信大数据舆情分析系统</title>
 
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>

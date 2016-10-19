@@ -8,137 +8,109 @@ $(document).ready(function () {
 
 function draw_figures(keyword) {
     AmCharts.makeChart("chart-keyword-count", {
-        "type": "serial",
-        "addClassNames": true,
-        "theme": "light",
-        "autoMargins": false,
-        "marginLeft": 50,
-        "marginRight": 8,
-        "marginTop": 10,
-        "marginBottom": 26,
-        "balloon": {
-            "adjustBorderColor": false,
-            "horizontalPadding": 10,
-            "verticalPadding": 8,
-            "color": "#ffffff"
-        },
-        "dataProvider": DATA_KEYWORD_COUNT,
-        "valueAxes": [{
-            "axisAlpha": 0,
-            "position": "left"
+        type: "serial",
+        theme: "light",
+        dataProvider: DATA_KEYWORD_COUNT,
+        valueAxes: [{
+            position: "left"
         }],
-        "graphs": [{
-            "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
-            "bullet": "round",
-            "lineThickness": 3,
-            "bulletSize": 7,
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "useLineColorForBulletBorder": true,
-            "bulletBorderThickness": 3,
-            "fillAlphas": 0,
-            "lineAlpha": 1,
-            "title": "微博",
-            "valueField": "weibo",
-            "dashLengthField": "dashLengthLine"
+        graphs: [{
+            balloonText: "<span class='balloon'>[[title]] ([[category]]): [[value]]</span>",
+            bullet: "round",
+            lineThickness: 3,
+            bulletSize: 7,
+            bulletBorderAlpha: 1,
+            bulletColor: "#FFFFFF",
+            useLineColorForBulletBorder: true,
+            bulletBorderThickness: 3,
+            fillAlphas: 0,
+            title: "微博",
+            valueField: "weibo"
         }, {
-            "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
-            "bullet": "round",
-            "lineThickness": 3,
-            "bulletSize": 7,
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "useLineColorForBulletBorder": true,
-            "bulletBorderThickness": 3,
-            "fillAlphas": 0,
-            "lineAlpha": 1,
-            "title": "微信",
-            "valueField": "wechat",
-            "dashLengthField": "dashLengthLine"
+            balloonText: "<span class='balloon'>[[title]] ([[category]]): [[value]]</span>",
+            bullet: "round",
+            lineThickness: 3,
+            bulletSize: 7,
+            bulletBorderAlpha: 1,
+            bulletColor: "#FFFFFF",
+            useLineColorForBulletBorder: true,
+            bulletBorderThickness: 3,
+            fillAlphas: 0,
+            title: "微信",
+            valueField: "wechat"
         }, {
-            "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
-            "bullet": "round",
-            "lineThickness": 3,
-            "bulletSize": 7,
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "useLineColorForBulletBorder": true,
-            "bulletBorderThickness": 3,
-            "fillAlphas": 0,
-            "lineAlpha": 1,
-            "title": "论坛",
-            "valueField": "baidu",
-            "dashLengthField": "dashLengthLine"
+            balloonText: "<span class='balloon'>[[title]] ([[category]]): [[value]]</span>",
+            bullet: "round",
+            lineThickness: 3,
+            bulletSize: 7,
+            bulletBorderAlpha: 1,
+            bulletColor: "#FFFFFF",
+            useLineColorForBulletBorder: true,
+            bulletBorderThickness: 3,
+            fillAlphas: 0,
+            title: "论坛",
+            valueField: "baidu"
         }, {
-            "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
-            "bullet": "round",
-            "lineThickness": 3,
-            "bulletSize": 7,
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "useLineColorForBulletBorder": true,
-            "bulletBorderThickness": 3,
-            "fillAlphas": 0,
-            "lineAlpha": 1,
-            "title": "报刊",
-            "valueField": "blog",
-            "dashLengthField": "dashLengthLine"
+            balloonText: "<span class='balloon'>[[title]] ([[category]]): [[value]]</span>",
+            bullet: "round",
+            lineThickness: 3,
+            bulletSize: 7,
+            bulletBorderAlpha: 1,
+            bulletColor: "#FFFFFF",
+            useLineColorForBulletBorder: true,
+            bulletBorderThickness: 3,
+            fillAlphas: 0,
+            title: "报刊",
+            valueField: "blog"
         }, {
-            "balloonText": "<span style='font-size:12px;'>[[title]] in [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
-            "bullet": "round",
-            "lineThickness": 3,
-            "bulletSize": 7,
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "useLineColorForBulletBorder": true,
-            "bulletBorderThickness": 3,
-            "fillAlphas": 0,
-            "lineAlpha": 1,
-            "title": "新闻",
-            "valueField": "news",
-            "dashLengthField": "dashLengthLine"
+            balloonText: "<span class='balloon'>[[title]] ([[category]]): [[value]]</span>",
+            bullet: "round",
+            lineThickness: 3,
+            bulletSize: 7,
+            bulletBorderAlpha: 1,
+            bulletColor: "#FFFFFF",
+            useLineColorForBulletBorder: true,
+            bulletBorderThickness: 3,
+            fillAlphas: 0,
+            title: "新闻",
+            valueField: "news"
         }],
-        "categoryField": "month",
-        "categoryAxis": {
-            "gridPosition": "start",
-            "axisAlpha": 0,
-            "tickLength": 0
+        categoryField: "month",
+        categoryAxis: {
+            gridPosition: "start",
+            axisAlpha: 0,
+            tickLength: 0
         }
     });
     AmCharts.makeChart("chart-keyword-details", {
-        "type": "serial",
-        "theme": "light",
-        "dataProvider": DATA_KEYWORD_DETAILS[keyword],
-        "valueAxes": [{
-            "minimum": 0,
-            "axisAlpha": 0,
-            "dashLength": 4,
-            "position": "left"
+        type: "serial",
+        theme: "light",
+        dataProvider: DATA_KEYWORD_DETAILS[keyword],
+        valueAxes: [{
+            minimum: 0,
+            position: "left"
         }],
-        "startDuration": 1,
-        "graphs": [{
-            "balloonText": "<span style='font-size:13px;'>[[category]]: <b>[[value]]</b></span>",
-            "bulletOffset": 10,
-            "bulletSize": 52,
-            "colorField": "color",
-            "cornerRadiusTop": 8,
-            "customBulletField": "bullet",
-            "fillAlphas": 0.8,
-            "lineAlpha": 0,
-            "type": "column",
-            "valueField": "points"
+        startDuration: 1,
+        graphs: [{
+            balloonText: "<span class='balloon'>[[category]]: [[value]]</span>",
+            cornerRadiusTop: 8,
+            fillAlphas: 0.8,
+            lineAlpha: 0,
+            type: "column",
+            valueField: "points"
         }],
-        "marginTop": 10,
-        "marginRight": 20,
-        "marginLeft": 20,
-        "marginBottom": 30,
-        "autoMargins": false,
-        "categoryField": "name",
-        "categoryAxis": {
-            "axisAlpha": 0,
-            "gridAlpha": 0,
-            "inside": true,
-            "tickLength": 0
+        marginTop: 10,
+        marginRight: 20,
+        marginLeft: 10,
+        marginBottom: 30,
+        autoMargins: false,
+        categoryField: "name",
+        categoryAxis: {
+            axisAlpha: 0,
+            gridAlpha: 0,
+            inside: true,
+            color: "white",
+            fontSize: 13
         },
         rotate: true
     });

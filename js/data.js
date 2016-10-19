@@ -25,49 +25,44 @@ var DATA_SUMMARY = [{
 }];
 
 var DATA_SUMMARY_GRAPHS = [{
-    balloonText: "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+    balloonText: "<span class='balloon'>[[title]]: [[value]]</span>",
     fillAlphas: 0.8,
     labelText: "[[value]]",
     lineAlpha: 0.3,
     title: "微博",
     type: "column",
-    color: "#000000",
     valueField: "weibo"
 }, {
-    balloonText: "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+    balloonText: "<span class='balloon'>[[title]]: [[value]]</span>",
     fillAlphas: 0.8,
     labelText: "[[value]]",
     lineAlpha: 0.3,
     title: "微信公众号",
     type: "column",
-    color: "#000000",
     valueField: "wechat"
 }, {
-    balloonText: "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+    balloonText: "<span class='balloon'>[[title]]: [[value]]</span>",
     fillAlphas: 0.8,
     labelText: "[[value]]",
     lineAlpha: 0.3,
     title: "百度贴吧",
     type: "column",
-    color: "#000000",
     valueField: "baidu"
 }, {
-    balloonText: "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+    balloonText: "<span class='balloon'>[[title]]: [[value]]</span>",
     fillAlphas: 0.8,
     labelText: "[[value]]",
     lineAlpha: 0.3,
     title: "知名博客",
     type: "column",
-    color: "#000000",
     valueField: "blog"
 }, {
-    balloonText: "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+    balloonText: "<span class='balloon'>[[title]]: [[value]]</span>",
     fillAlphas: 0.8,
     labelText: "[[value]]",
     lineAlpha: 0.3,
     title: "新闻媒体",
     type: "column",
-    color: "#000000",
     valueField: "news"
 }];
 
@@ -129,7 +124,7 @@ for (var key in DATA_KEYWORD_DETAILS_WORDS) {
             m = Math.round((m + Math.round(Math.random() * m)) / 2);
             DATA_KEYWORD_DETAILS[key].push({
                 name: DATA_KEYWORD_DETAILS_WORDS[key][i],
-                points: m
+                points: 350 + m
             });
         }
     }

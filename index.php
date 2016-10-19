@@ -194,11 +194,7 @@
                                                     <div id="chart-summary-btn-group" class="actions"></div>
                                                 </div>
                                                 <div class="portlet-body">
-                                                    <div class="task-content">
-                                                        <div class="scroller" style="height: 238px;" data-always-visible="1" data-rail-visible1="1">
-                                                            <div id="chart-summary"></div>
-                                                        </div>
-                                                    </div>
+                                                    <div id="chart-summary"></div>
                                                 </div>
                                             </div>
                                         </div>

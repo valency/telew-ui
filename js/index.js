@@ -11,26 +11,20 @@ function draw_figures() {
         type: "serial",
         theme: "light",
         legend: {
-            "horizontalGap": 10,
-            "maxColumns": 1,
-            "position": "right",
-            "useGraphSettings": true,
-            "markerSize": 10
+            position: "right",
+            useGraphSettings: true,
+            fontSize: 13
         },
         dataProvider: DATA_SUMMARY,
         valueAxes: [{
-            "stackType": "regular",
-            "axisAlpha": 0.5,
-            "gridAlpha": 0
+            stackType: "regular"
         }],
         graphs: DATA_SUMMARY_GRAPHS,
         rotate: true,
         categoryField: "keyword",
         categoryAxis: {
-            "gridPosition": "start",
-            "axisAlpha": 0,
-            "gridAlpha": 0,
-            "position": "left"
+            position: "left",
+            fontSize: 13
         }
     });
 }
